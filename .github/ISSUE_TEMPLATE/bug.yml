@@ -1,0 +1,46 @@
+name: Bug report / 问题反馈
+description: Report a wallpaper transition, installation, or silent-launch problem.
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Versions / 版本
+      description: Windows, Wallpaper Engine, PowerShell 7, and this tool's release.
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: RDP client / 远程客户端
+      placeholder: Windows App on iPad, mstsc, etc.
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Running engine / 实际运行的主程序
+      options:
+        - wallpaper32.exe
+        - wallpaper64.exe
+        - Unknown / 不确定
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction / 复现步骤
+      description: Include what happens after switching window focus, not only immediately after connecting.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics / 诊断
+      description: Status.ps1 output and relevant events.jsonl lines. Redact personal paths, usernames, IPs, and any secrets before posting.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy / 隐私
+      options:
+        - label: I removed personal information and credentials from diagnostics and screenshots.
+          required: true

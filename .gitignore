@@ -1,0 +1,10 @@
+Launcher.exe
+config.json
+powershell-path.txt
+state-*.json
+events.jsonl
+*.log
+*-task.xml
+*.zip
+.test-results/
+.DS_Store
